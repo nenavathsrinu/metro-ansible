@@ -1,0 +1,13 @@
+---
+- name: this palybook install httpd package
+  hosts: metro
+  become: true
+  tasks:
+  - name: installing packages httpd
+    yum: 
+      name: httpd
+      state: installed
+  - name: httpd services starting
+    service:
+      name: httpd
+      state: started

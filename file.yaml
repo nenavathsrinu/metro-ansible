@@ -1,0 +1,9 @@
+---
+- name: this playbook create a files
+  hosts: metro
+  become: true
+  tasks: 
+  - name: creating directory 
+    file: 
+      path: /home/ansadmin/metrolab
+      state: absent

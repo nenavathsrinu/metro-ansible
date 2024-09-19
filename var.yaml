@@ -1,0 +1,12 @@
+---
+- name: Create User
+  hosts: metro
+  become: true
+
+  vars:
+    user: bunny
+
+  tasks :
+  - name: Creating a user {{user}}
+    user:
+      name: "{{user}}"

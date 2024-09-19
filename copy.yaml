@@ -1,0 +1,12 @@
+---
+- name: this playbook copy the files
+  hosts: metro
+  become: true
+  tasks:
+  - name: copy the file from ansible server to nodes
+    copy:
+       src: /home/ansadmin/index.html
+       dest: /home/ansadmin
+       mode: 0700
+       owner: raj
+       group: root

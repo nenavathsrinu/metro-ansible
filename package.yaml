@@ -1,0 +1,9 @@
+---
+- name: this playbook install packages
+  hosts: metro
+  become: true
+  tasks: 
+  - name: installing tree package
+    yum:
+      name: tree
+      state: installed

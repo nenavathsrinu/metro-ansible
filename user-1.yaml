@@ -1,0 +1,8 @@
+---
+- name: This playbook create a user >>> display name
+  hosts: metro
+  become: true
+  tasks:
+  - name: Creating a user rohit
+    user:
+      name: rohit

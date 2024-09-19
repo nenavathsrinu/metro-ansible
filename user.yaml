@@ -1,0 +1,5 @@
+---
+- hosts: metro # target section 
+  become: true
+  tasks: # task section
+  - user: name=metro
